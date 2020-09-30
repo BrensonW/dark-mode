@@ -178,6 +178,21 @@ img {
   -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+
+  .nav-left {
+    width  : 100%;
+    display: flex;
+    margin : auto;
+
+    .navLink {
+      font-size      : 1.7rem;
+      line-height    : 2.5rem;
+      margin-left    : 5rem;
+      color          : #f68819;
+      text-decoration: none;
+
+    }
+  }
 }
 
 .dark-mode__toggle {
@@ -187,6 +202,7 @@ img {
   height: 20px;
   position: relative;
   width: 40px;
+  margin-top: 3.5rem;
 }
 
 .toggle {
@@ -240,6 +256,25 @@ text-align: left;
 
 .coin__logo {
   width: 50px;
+}
+
+.stretchPageCont {
+  padding: 1rem 1rem;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .facts {
+    width  : 100%;
+    display: flex;
+    margin : 3rem;
+
+    .fact {
+      width : 30%;
+      margin: 1rem;
+    }
+  }
 }
 
 .dark-mode {

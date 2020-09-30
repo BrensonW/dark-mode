@@ -4,8 +4,11 @@ import axios from "axios";
 
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
+import StretchPage from './components/StretchPage';
 
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import "./styles.scss";
+
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
@@ -22,10 +25,22 @@ const App = () => {
   return (
     <div className={darkMode ? "dark-mode App" : "App"}>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Switch>
+        <Route exact path='/'>
       <Charts coinData={coinData} />
+      </Route>
+        <Route path='/random'>
+          <StretchPage />
+        </Route>
+      </Switch>
     </div>
   );
 };
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const rootElement = document.getElementById('root');
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  rootElement
+);
